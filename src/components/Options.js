@@ -4,7 +4,9 @@ const Options = ({ question, dispatch, answer }) => {
       {question.options.map((option, index) => {
         return (
           <button
-            className="btn btn-option"
+            className={`btn btn-option ${index === answer ? "answer" : ""} ${
+              index === question.correctOption ? "correct" : "wrong"
+            }`}
             key={option}
             onClick={() => dispatch({ type: "newAnswer", payload: index })}
           >
