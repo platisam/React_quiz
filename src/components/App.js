@@ -1,4 +1,5 @@
 import { useEffect, useReducer } from "react";
+
 import Header from "./Header";
 import Main from "./Main";
 import Loader from "./Loader";
@@ -9,6 +10,7 @@ import NextButton from "./NextButton";
 import Progress from "./Progress";
 import FinishScreen from "./FinishScreen";
 import Footer from "./Footer";
+import Timer from "./Timer";
 
 const initialState = {
   questions: [],
@@ -107,6 +109,7 @@ export default function App() {
               answer={answer}
             />
             <Footer>
+              <Timer />
               <NextButton
                 dispatch={dispatch}
                 answer={answer}
