@@ -1,11 +1,13 @@
-const Progress = ({ index, numQuestions, points }) => {
+const Progress = ({ index, numQuestions, points, maxPossiblePoints }) => {
   return (
     <header className="progress">
       <p>
         Question <strong>{index + 1}</strong> / {numQuestions}
       </p>
       <p>
-        <strong>{points} / X</strong>
+        <strong>
+          {points} / {maxPossiblePoints}
+        </strong>
       </p>
     </header>
   );
